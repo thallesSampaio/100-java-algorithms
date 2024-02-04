@@ -30,6 +30,20 @@ public class Controller {
             case 5:
                 algorithms.Alghoritm05();
                 break;
+
+            case 6:
+                algorithms.Alghoritm06();
+                break;
+
+            case 7:
+                algorithms.Alghoritm07();
+                break;
+            case 8:
+                algorithms.Alghoritm08();
+                break;
+            case 9:
+                algorithms.Alghoritm09();
+                break;
         }
     }
 }

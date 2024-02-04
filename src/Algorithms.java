@@ -39,15 +39,36 @@ public class Algorithms {
     }
 
     public void Alghoritm06() {
+        System.out.print("Digite um numero: ");
+        int n1 = scanner.nextInt();
+        System.out.println("O antecessor de: " + n1 + " é " + (-1 + n1));
+        System.out.println("O sucessor de: " + n1 + " é " + (n1+1));
     }
 
     public void Alghoritm07() {
+        System.out.print("Digite um numero: ");
+        float n = scanner.nextFloat();
+        System.out.print("O dobro de: " + n + " é: " + (n * 2));
+        System.out.println("A terça parte de " + n + " é:" + (n / 3));
     }
 
     public void Alghoritm08() {
+        System.out.print("Digite uma distancia: ");
+        float n = scanner.nextFloat();
+        System.out.println("A distancia: " + n + " metros corresponde a:");
+        System.out.println((n / 1000) +"Km");
+        System.out.println((n / 100) + "Hm");
+        System.out.println((n / 10) + "Dam");
+        System.out.println((n / 0.1) + "Dm");
+        System.out.println((n / 0.01) + "Cm");
+        System.out.println((n / 0.001) + "Mm");
     }
 
     public void Alghoritm09() {
+        System.out.print("Digite quanto dinheiro você tem: ");
+        float n = scanner.nextFloat();
+        double r = (n / 4.97);
+        System.out.println("Você tem R$" + n + " e pode comprar U$" + r);
     }
 
     public void Alghoritm10() {
