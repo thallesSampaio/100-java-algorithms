@@ -11,7 +11,6 @@ public class Controller {
                 break;
 
             case 1:
-                System.out.println("Alghoritm 01");
                 algorithms.Alghoritm01();
                 break;
 
@@ -38,11 +37,37 @@ public class Controller {
             case 7:
                 algorithms.Alghoritm07();
                 break;
+
             case 8:
                 algorithms.Alghoritm08();
                 break;
+
             case 9:
                 algorithms.Alghoritm09();
+                break;
+
+            case 10:
+                algorithms.Alghoritm10();
+                break;
+
+            case 11:
+                algorithms.Alghoritm11();
+                break;
+
+            case 12:
+                algorithms.Alghoritm12();
+                break;
+
+            case 13:
+                algorithms.Alghoritm13();
+                break;
+
+            case 14:
+                algorithms.Alghoritm14();
+                break;
+
+            case 15:
+                algorithms.Alghoritm15();
                 break;
         }
     }

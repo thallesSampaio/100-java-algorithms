@@ -72,21 +72,50 @@ public class Algorithms {
     }
 
     public void Alghoritm10() {
+        System.out.print("Digite a largura da parede: ");
+        double b = scanner.nextDouble();
+        System.out.print("Digite a altura da parede: ");
+        double h = scanner.nextDouble();
+        double r = (b * h) / 2 ;
+        System.out.println("A área a ser pintada é: " + (b*h) + "m² e será necessário um total de " + r + " litros de tinta");
     }
 
     public void Alghoritm11() {
+        System.out.print("Digite o valor de A: ");
+        double a = scanner.nextDouble();
+        System.out.print("Digite o valor de B: ");
+        double b = scanner.nextDouble();
+        System.out.print("Digite o valor de C: ");
+        double c = scanner.nextDouble();
+        double r  = Math.pow(b,2) - (4 * (a * c));
+        System.out.println("Valor de delta Δ é: "+r);
     }
 
     public void Alghoritm12() {
+        System.out.print("Digite o valor do produto: ");
+        double p = scanner.nextDouble();
+        System.out.println("O preço promocional com 5% de desconto é: " + (p - (p * 0.05)));
     }
 
     public void Alghoritm13() {
+        System.out.print("Digite seu salário: ");
+        double i = scanner.nextDouble();
+        System.out.println("Seu novo salário com 15% de aumento é: " + (i + (i * 0.15)));
     }
 
     public void Alghoritm14() {
+        System.out.print("Digite a quantidade de quilômetros percorridos: ");
+        double km = scanner.nextDouble();
+        System.out.print("Digite quantos dias o carro ficou alugado: ");
+        int dias = scanner.nextInt();
+        System.out.println("Total a pagar: " + ((km * 0.2)+(dias*90)) + "R$");
     }
 
     public void Alghoritm15() {
+        System.out.print("Digite número de dias trabalhados no mês: ");
+        int dias = scanner.nextInt();
+        int h = dias * 8;
+        System.out.println("Salário: " + (h * 25));
     }
 
     public void Alghoritm16() {
