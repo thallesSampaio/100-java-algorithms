@@ -115,22 +115,63 @@ public class Algorithms {
         System.out.print("Digite número de dias trabalhados no mês: ");
         int dias = scanner.nextInt();
         int h = dias * 8;
-        System.out.println("Salário: " + (h * 25));
+        System.out.println("Salário: " + (h * 25) + "R$");
     }
 
     public void Alghoritm16() {
+        System.out.print("Quantidade de cigarros fumados por dia: ");
+        int c = scanner.nextInt();
+        System.out.print("Durante quantos anos já fumou: ");
+        int a = scanner.nextInt();
+        System.out.println("Total de dias de vida perdidos: " + ( (((a*365) * (c * 10)) / 60) / 24) );
     }
 
     public void Alghoritm17() {
+        System.out.println("Digite a velocidade do carro: ");
+        int v = scanner.nextInt();
+        if (v > 80) {
+            System.out.println("Velocidade atual (" +v+ "Km/h) acima da permitida multa aplicada de: R$" + ((v -80) * 5));
+        } else {
+            System.out.println("Velocidade atual: " + v + "Km/h. Dentro da velocidade permitida.");
+        }
     }
 
     public void Alghoritm18() {
+        System.out.print("Digite o ano do seu nascimento: ");
+        int a = scanner.nextInt();
+        int r = (2024 - a);
+        if (r >= 18) {
+            System.out.println("Você pode votar.");
+        } else {
+            System.out.println("Você não pode votar.");
+        }
     }
 
     public void Alghoritm19() {
+        System.out.print("Digite o nome do aluno: ");
+        String name = scanner.next();
+        System.out.print("Digite primeira nota: ");
+        double n1 = scanner.nextDouble();
+        System.out.print("Digite segunda nota: ");
+        double n2 = scanner.nextDouble();
+        System.out.print("Digite o ano do seu nascimento: ");
+        double media = (n1 + n2) / 2;
+        System.out.println("Média: " + media);
+        if (media > 7) {
+            System.out.println("O aluno " + name + " teve um bom aproveitamento");
+        } else {
+            System.out.println("O aluno " + name + " teve um mau aproveitamento");
+        }
     }
 
     public void Alghoritm20() {
+        System.out.print("Digite um numero ");
+        int number = scanner.nextInt();
+        if ((number%2) == 0) {
+            System.out.println((number + " é par!"));
+        } else {
+            System.out.println((number + " é impar!"));
+        }
     }
 
     public void Alghoritm21() {
