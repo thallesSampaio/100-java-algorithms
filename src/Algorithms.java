@@ -154,7 +154,6 @@ public class Algorithms {
         double n1 = scanner.nextDouble();
         System.out.print("Digite segunda nota: ");
         double n2 = scanner.nextDouble();
-        System.out.print("Digite o ano do seu nascimento: ");
         double media = (n1 + n2) / 2;
         System.out.println("Média: " + media);
         if (media > 7) {
@@ -175,33 +174,163 @@ public class Algorithms {
     }
 
     public void Alghoritm21() {
+        System.out.println("Digite o ano: ");
+        int ano = scanner.nextInt();
+        if((ano % 4) == 0) {
+            System.out.println(ano + " é um ano bissexto.");
+        } else {
+            System.out.println(ano + " não é um ano bissexto.");
+        }
     }
 
     public void Alghoritm22() {
+        System.out.println("Digite o ano do seu nascimento: ");
+        int ano = scanner.nextInt();
+        if ((2024 - ano) > 18) {
+            System.out.println("Já passaram " + ((2024 - ano) - 18) + " anos.");
+        } else if ((2024 - ano) < 18){
+            System.out.println("Faltam " + (18 - (2024 - ano)) + " anos.");
+        }
     }
 
     public void Alghoritm23() {
+        System.out.print("Digite o nome: ");
+        String nome = scanner.next();
+        System.out.print("Digite seu sexo ( [1] para homem - [2] para mulher): ");
+        int sexo = scanner.nextInt();
+        System.out.print("Digite o valor total das compras: ");
+        double valor = scanner.nextDouble();
+        if (sexo == 2 ) {
+            System.out.println("Nome: " + nome + "\nSexo: Feminino" +
+                    "\nValor total em compras: " + valor +
+                    "\nValor com desconto de 13%: " + (valor - (valor * 0.13)));
+        } else {
+            System.out.println("Nome: " + nome + "\nSexo: Masculino" +
+                    "\nValor total em compras: " + valor +
+                    "\nValor com desconto de 13%: " + (valor - (valor * 0.05)));
+        }
     }
 
     public void Alghoritm24() {
+        System.out.print("Digite quantos quilômetros deseja percorrer: ");
+        double km = scanner.nextDouble();
+        if (km <= 200) {
+            System.out.println("Preço da passagem: R$" + (km * 0.50));
+        } else {
+            System.out.println("Preço da passagem: R$" + (km * 0.45));
+        }
     }
 
     public void Alghoritm25() {
+        System.out.print("Digite o tamanho da primeira reta: ");
+        double r1 = scanner.nextDouble();
+        System.out.print("Digite o tamanho da segunda reta: ");
+        double r2 = scanner.nextDouble();
+        System.out.print("Digite o tamanho da terceira reta: ");
+        double r3 = scanner.nextDouble();
+        if (r3 > (r1 + r2)) {
+            System.out.println("Não é possível formar um triângulo com os valores informados.");
+        } else if (r2 > (r1 + r3)) {
+            System.out.println("Não é possível formar um triângulo com os valores informados.");
+        } else if (r1 > (r2 + r3)) {
+            System.out.println("Não é possível formar um triângulo com os valores informados.");
+        } else {
+            System.out.println("É possiel formar um triangulo com os valores informados.");
+        }
     }
 
     public void Alghoritm26() {
+        System.out.print("Digite o primeiro numero: ");
+        int n1 = scanner.nextInt();
+        System.out.print("Digite o segundo numero: ");
+        int n2 = scanner.nextInt();
+        if (n1 > n2) {
+            System.out.println("O primeiro valor é o maior.");
+        } else if(n1 < n2) {
+            System.out.println("O segundo valor é o maior.");
+        } else {
+            System.out.println("Os valores são iguais.");
+        }
     }
 
     public void Alghoritm27() {
+        System.out.print("Digite primeira nota: ");
+        double n1 = scanner.nextDouble();
+        System.out.print("Digite segunda nota: ");
+        double n2 = scanner.nextDouble();
+        double media = (n1 + n2) / 2;
+        if (media <= 4.9) {
+            System.out.println("Reprovado.");
+        } else if (media <= 6.9) {
+            System.out.println("Recuperação.");
+        } else {
+            System.out.println("Aprovado.");
+        }
     }
 
     public void Alghoritm28() {
+        System.out.print("Digite a largura: ");
+        double l = scanner.nextDouble();
+        System.out.print("Digite o comprimento: ");
+        double w = scanner.nextDouble();
+        double area = l * w;
+        if (area < 100) {
+            System.out.println("Area: " + area + "m². TERRENO POPULAR.");
+        } else if (area >= 100 && area <= 500) {
+            System.out.println("Area: " + area + "m². TERRENO MASTER.");
+        } else {
+            System.out.println("Area: " + area + "m². TERRENO VIP.");
+        }
     }
 
     public void Alghoritm29() {
+        System.out.print("Nome do funcionário: ");
+        String nome = scanner.next();
+        System.out.print("Salário: ");
+        double salario = scanner.nextDouble();
+        System.out.print("Quantos anos trabalha na empresa: ");
+        double anos = scanner.nextDouble();
+        if (anos <= 3) {
+            System.out.println("Nome: " + nome +
+                    "\nSalário atual: R$" + salario +
+                    "\nSalário reajustado: R$" + (salario + (salario * 0.03)) +
+                    "\nAnos de empresa: " + anos);
+        } else if (anos > 3 && anos < 10) {
+            System.out.println("Nome: " + nome +
+                    "\nSalário atual: R$" + salario +
+                    "\nSalário reajustado: R$" + (salario + (salario * 0.125)) +
+                    "\nAnos de empresa: " + anos);
+        } else {
+            System.out.println("Nome: " + nome +
+                    "\nSalário atual: R$" + salario +
+                    "\nSalário reajustado: R$" + (salario + (salario * 0.2)) +
+                    "\nAnos de empresa: " + anos);
+        }
     }
 
     public void Alghoritm30() {
+        System.out.print("Digite o tamanho da primeira reta: ");
+        double r1 = scanner.nextDouble();
+        System.out.print("Digite o tamanho da segunda reta: ");
+        double r2 = scanner.nextDouble();
+        System.out.print("Digite o tamanho da terceira reta: ");
+        double r3 = scanner.nextDouble();
+        if (r3 > (r1 + r2)) {
+            System.out.println("Não é possível formar um triângulo com os valores informados.");
+        } else if (r2 > (r1 + r3)) {
+            System.out.println("Não é possível formar um triângulo com os valores informados.");
+        } else if (r1 > (r2 + r3)) {
+            System.out.println("Não é possível formar um triângulo com os valores informados.");
+        } else {
+            System.out.print("É possiel formar um triangulo com os valores informados.");
+            if (r1 == r2 && r2 == r3) {
+                System.out.println(" Sendo esse: EQUILÁTERO.");
+            } else if (r1 == r2 || r2 == r3 || r1 == r3) {
+                System.out.println(" Sendo esse: ISÓSCELES.");
+            } else {
+                System.out.println(" Sendo esse: ESCALENO.");
+            }
+        }
     }
 
     public void Alghoritm31() {
