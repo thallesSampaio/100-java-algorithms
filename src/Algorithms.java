@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+import static java.lang.Integer.parseInt;
+
 public class Algorithms {
 
     Scanner scanner = new Scanner(System.in);
@@ -334,18 +336,113 @@ public class Algorithms {
     }
 
     public void Alghoritm31() {
+        System.out.print("Jogador 1 escolha: [1] PEDRA - [2] PAPEL - [3] TESOURA -");
+        int option = scanner.nextInt();
+        System.out.print("Computador 2 escolha: [1] PEDRA - [2] PAPEL - [3] TESOURA -");
+        int option2 = scanner.nextInt();
+        switch (option) {
+            case 1:
+                if(option2 == 2) {
+                    System.out.println("Jogador 2 venceu!");
+                } else if(option2 == 3) {
+                    System.out.println("Jogador 1 venceu!");
+                } else {
+                    System.out.println("Empate!");
+                }
+                break;
+            case 2:
+                if(option2 == 1) {
+                    System.out.println("Jogador 1 venceu!");
+                } else if(option2 == 3) {
+                    System.out.println("Jogador 2 venceu!");
+                } else {
+                    System.out.println("Empate!");
+                }
+                break;
+            case 3:
+                if(option2 == 1) {
+                    System.out.println("Jogador 2 venceu!");
+                } else if(option2 == 2) {
+                    System.out.println("Jogador 1 venceu!");
+                } else {
+                    System.out.println("Empate!");
+                }
+                break;
+        }
     }
 
     public void Alghoritm32() {
+        double rand = (Math.floor(Math.random() * 5 + 1)) ;
+        System.out.print("O computador sorteou um numero de 1 a 5, digite seu palpite: ");
+        double palpite = scanner.nextDouble();
+        if(rand == palpite) {
+            System.out.println("Você acertou! ");
+        } else {
+            System.out.println("Você errou! Escolha da maquina: " + rand);
+        }
     }
 
     public void Alghoritm33() {
+        System.out.print("Digite o valor da casa: ");
+        double casa = scanner.nextDouble();
+        System.out.print("Digite seu salario: ");
+        double salario = scanner.nextDouble();
+        System.out.print("Quantos anos vai pagar:  ");
+        int anos = scanner.nextInt();
+        double mensal = (casa / (anos * 12));
+        double excedente = salario + (salario * 0.3);
+        if (mensal > excedente) {
+            System.out.println("Empréstimo negado! ");
+        } else {
+            System.out.println("Empréstimo aprovado! ");
+        }
     }
 
     public void Alghoritm34() {
+        System.out.print("Digite seu peso:  ");
+        double peso = scanner.nextDouble();
+        System.out.print("Digite sua altura:  ");
+        double altura = Math.pow(scanner.nextDouble(), 2);
+        double imc = peso / altura;
+        if(imc < 18.5) {
+            System.out.println("Abaixo do peso! IMC: " + imc);
+        } else if (imc <= 25) {
+            System.out.println("Peso ideal! IMC: " + imc);
+        } else if (imc <= 30) {
+            System.out.println("Sobrepeso! IMC: " + imc);
+        } else if (imc <= 40 ) {
+            System.out.println("Obesidade! IMC: " + imc);
+        } else {
+            System.out.println("Obesidade mórbida! IMC: " + imc);
+        }
     }
 
     public void Alghoritm35() {
+        System.out.print("Tipo do carro: [1] POPULAR - [2] LUXUOSO ");
+        int carro = scanner.nextInt();
+        System.out.print("Dias de aluguel:  ");
+        int dias = scanner.nextInt();
+        System.out.print("Quilômetros percorridos:  ");
+        double km = scanner.nextDouble();
+        switch (carro) {
+            case 1:
+                if(km <= 100) {
+                    km = km * 0.20;
+                } else if (km > 100) {
+                    km = km * 0.10;
+                }
+                System.out.println("Total a ser pago: R$" + (km + (dias * 90)));
+                break;
+
+            case 2:
+                if(km <= 100) {
+                    km = km * 0.30;
+                } else if (km > 100) {
+                    km = km * 0.25;
+                }
+                System.out.println("Total a ser pago: R$" + (km + (dias * 150)));
+                break;
+        }
     }
 
     public void Alghoritm36() {

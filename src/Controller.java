@@ -129,6 +129,26 @@ public class Controller {
             case 30:
                 algorithms.Alghoritm30();
                 break;
+
+            case 31:
+                algorithms.Alghoritm31();
+                break;
+
+            case 32:
+                algorithms.Alghoritm32();
+                break;
+
+            case 33:
+                algorithms.Alghoritm33();
+                break;
+
+            case 34:
+                algorithms.Alghoritm34();
+                break;
+
+            case 35:
+                algorithms.Alghoritm35();
+                break;
         }
     }
 }
