@@ -446,18 +446,75 @@ public class Algorithms {
     }
 
     public void Alghoritm36() {
+        System.out.print("Quantidade de horas:  ");
+        int horas = scanner.nextInt();
+        if (horas < 10) {
+            System.out.println("Total de pontos: " + (horas * 2) +
+                    "\nTotal de dinheiro ganho: R$" + ((horas * 2) * 0.05) );
+        } else if (horas <= 20) {
+            System.out.println("Total de pontos: " + (horas * 5) +
+                    "\nTotal de dinheiro ganho: R$" + ((horas * 5) * 0.05) );
+        } else if (horas > 20) {
+            System.out.println("Total de pontos: " + (horas * 10) +
+                    "\nTotal de dinheiro ganho: R$" + ((horas * 10) * 0.05) );
+        }
     }
 
     public void Alghoritm37() {
+        System.out.print("Digite o salario: ");
+        double salario = scanner.nextDouble();
+        System.out.print("Digite seu sexo ( [1] para homem - [2] para mulher): ");
+        int sexo = scanner.nextInt();
+        System.out.print("Digite a quantos anos esse funcionário esta na empresa: ");
+        double anos = scanner.nextDouble();
+        switch(sexo) {
+            case 1:
+                if (anos < 20) {
+                    System.out.println("Novo salário: R$" + (salario + (salario * 0.03)));
+                } else if (anos >= 20 && anos < 30) {
+                    System.out.println("Novo salário: R$" + (salario + (salario * 0.13)));
+                } else if(anos > 30) {
+                    System.out.println("Novo salário: R$" + (salario + (salario * 0.25)));
+                }
+                break;
+
+            case 2:
+                if (anos < 15) {
+                    System.out.println("Novo salário: R$" + (salario + (salario * 0.05)));
+                } else if (anos >= 15 && anos < 20) {
+                    System.out.println("Novo salário: R$" + (salario + (salario * 0.12)));
+                } else if(anos > 20) {
+                    System.out.println("Novo salário: R$" + (salario + (salario * 0.23)));
+                }
+                break;
+        }
     }
 
     public void Alghoritm38() {
+        int i = 6;
+        while (i < 12) {
+            System.out.println(i);
+            i++;
+        }
+        System.out.println("Acabou!");
     }
 
     public void Alghoritm39() {
+        int i = 10;
+        while (i > 2) {
+            System.out.println(i);
+            i--;
+        }
+        System.out.println("Acabou!");
     }
 
     public void Alghoritm40() {
+        int i = 100;
+        while (i != -5) {
+            System.out.println(i);
+            i = i -5;
+        }
+        System.out.println("Acabou!");
     }
 
     public void Alghoritm41() {
