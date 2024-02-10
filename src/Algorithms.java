@@ -509,6 +509,15 @@ public class Algorithms {
     }
 
     public void Alghoritm40() {
+        int i = 0;
+        while (i < 21) {
+            System.out.println(i);
+            i = i + 3;
+        }
+        System.out.println("Acabou!");
+    }
+
+    public void Alghoritm41() {
         int i = 100;
         while (i != -5) {
             System.out.println(i);
@@ -517,19 +526,66 @@ public class Algorithms {
         System.out.println("Acabou!");
     }
 
-    public void Alghoritm41() {
-    }
-
     public void Alghoritm42() {
+        System.out.print("Digite um numero inteiro e positivo: ");
+        int numero = scanner.nextInt();
+        int i = 1;
+        while (i != numero) {
+            System.out.println(i);
+            i++;
+        }
+        System.out.println(i);
+        i++;
+        System.out.println("Acabou!");
     }
 
     public void Alghoritm43() {
+        int i = 30;
+        while (i > 0) {
+            if (i % 4 == 0) {
+                System.out.println("[" + i + "]" );
+                i--;
+            } else {
+                System.out.println(i);
+                i--;
+            }
+        }
     }
 
     public void Alghoritm44() {
+        System.out.print("Digite o valor inicial da contagem: ");
+        int inicial = scanner.nextInt();
+        System.out.print("Digite o valor final da contagem: ");
+        int finall = scanner.nextInt();
+        System.out.print("Digite o valor de incremento da contagem: ");
+        int incremento = scanner.nextInt();
+        while (inicial < finall) {
+            System.out.println(inicial);
+            inicial = inicial + incremento;
+        }
+        System.out.println("Acabou!");
     }
 
     public void Alghoritm45() {
+        System.out.print("Digite o valor inicial da contagem: ");
+        int inicial = scanner.nextInt();
+        System.out.print("Digite o valor final da contagem: ");
+        int finall = scanner.nextInt();
+        System.out.print("Digite o valor de incremento da contagem: ");
+        int incremento = scanner.nextInt();
+        if (inicial < finall) {
+            while (inicial < finall) {
+                System.out.println(inicial);
+                inicial = inicial + incremento;
+            }
+            System.out.println("Acabou!");
+        } else if (inicial > finall) {
+            while (inicial > finall) {
+                System.out.println(inicial);
+                inicial = inicial - incremento;
+            }
+            System.out.println("Acabou!");
+        }
     }
 
     public void Alghoritm46() {
