@@ -589,18 +589,72 @@ public class Algorithms {
     }
 
     public void Alghoritm46() {
+        int i = 6;
+        int j = 0;
+        while (i < 102) {
+            System.out.println(i);
+            i = i + 2;
+            j = j + i;
+        }
+        System.out.println("o resultado da soma é: " + j) ;
     }
 
     public void Alghoritm47() {
+        int i = 500;
+        int j = 0;
+        while (i > -50) {
+            System.out.println(i);
+            i = i - 50;
+            j = j + i;
+        }
+        System.out.println("o resultado da soma é: " + j) ;
     }
 
     public void Alghoritm48() {
+        int i = 0;
+        int total = 0;
+        while (i < 7) {
+            i++;
+            System.out.print("Digite um numero: ");
+            int numero = scanner.nextInt();
+            total = total + numero;
+        }
+        System.out.println("Soma total: " + total);
     }
 
     public void Alghoritm49() {
+        int i = 0;
+        int pares = 0;
+        while (i < 6) {
+            i++;
+            System.out.print("Digite um numero: ");
+            int numero = scanner.nextInt();
+            if ((numero % 2) == 0) {
+               pares++;
+            }
+        }
+        System.out.println("Total de pares: " + pares +
+                "\nTotal de impares: " + (i - pares));
     }
 
     public void Alghoritm50() {
+        int i = 0;
+        System.out.println("Numeros sorteados: ");
+        int maioresCinco = 0;
+        int divisiveisTres = 0;
+        while (i < 20) {
+            i++;
+            double rand = (Math.floor(Math.random() * 10 + 1));
+            System.out.println(rand);
+            if (rand > 5) {
+                maioresCinco++;
+            }
+            if (rand %3 == 0) {
+                divisiveisTres++;
+            }
+        }
+        System.out.println("Total de numeros maiores que cinco: " + maioresCinco);
+        System.out.println("Total de numeros divisiveis por tres: " + divisiveisTres);
     }
 
     public void Alghoritm51() {

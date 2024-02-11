@@ -190,6 +190,25 @@ public class Controller {
                 algorithms.Alghoritm45();
                 break;
 
+            case 46:
+                algorithms.Alghoritm46();
+                break;
+
+            case 47:
+                algorithms.Alghoritm47();
+                break;
+
+            case 48:
+                algorithms.Alghoritm48();
+                break;
+
+            case 49:
+                algorithms.Alghoritm49();
+                break;
+
+            case 50:
+                algorithms.Alghoritm50();
+                break;
         }
     }
 }
