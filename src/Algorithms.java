@@ -658,6 +658,24 @@ public class Algorithms {
     }
 
     public void Alghoritm51() {
+        int i = 0;
+        double menorValor = 0;
+        double maiorValor = 0;
+        while (i < 8) {
+            i++;
+            System.out.print("Digite o preço do produto: ");
+            double valorProduto = scanner.nextInt();
+            if (valorProduto > maiorValor)  {
+                maiorValor = valorProduto;
+            }
+            if (menorValor == 0)  {
+                menorValor = valorProduto;
+            } else if (menorValor > valorProduto) {
+                menorValor = valorProduto;
+            }
+        }
+        System.out.println("Maior valor digitado: " + maiorValor +
+                "\nMenor valor digitado: " + menorValor);
     }
 
     public void Alghoritm52() {

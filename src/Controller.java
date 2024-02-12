@@ -209,6 +209,10 @@ public class Controller {
             case 50:
                 algorithms.Alghoritm50();
                 break;
+
+            case 51:
+                algorithms.Alghoritm51();
+                break;
         }
     }
 }
