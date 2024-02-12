@@ -679,30 +679,260 @@ public class Algorithms {
     }
 
     public void Alghoritm52() {
+        int i = 0;
+        int media = 0;
+        int maiorDezoito = 0;
+        int menorCinco = 0;
+        int maiorIdade = 0;
+        while (i < 10 ) {
+            i++;
+            System.out.print("Digite sua idade: ");
+            int idade = scanner.nextInt();
+            media = media + idade;
+            if(idade > maiorIdade) {
+                maiorIdade = idade;
+            }
+            if (idade < 5) {
+                menorCinco++;
+            } else if (idade > 18) {
+                maiorDezoito++;
+            }
+        }
+        System.out.println("Maior idade lida: " + maiorIdade +
+                "\nMedia de idade: " + (media / 10) +
+                "\nTotal de maiores que 18 anos: " + maiorDezoito +
+                "\nTotal de menores que cinco: " +menorCinco);
     }
 
     public void Alghoritm53() {
+        int i = 0;
+        int homens = 0;
+        int mulheres = 0;
+        int mediaGrupo = 0;
+        int mediaHomens = 0;
+        int maioresVinte = 0;
+        while (i < 5) {
+            i++;
+            System.out.print("Digite seu sexo ( [1] para homem - [2] para mulher): ");
+            int sexo = scanner.nextInt();
+            System.out.print("Digite sua idade: ");
+            int idade = scanner.nextInt();
+            mediaGrupo = mediaGrupo + idade;
+            switch (sexo) {
+                case 1:
+                    homens++;
+                    mediaHomens = mediaHomens + idade;
+                    break;
+                case 2:
+                    mulheres++;
+                    if (idade > 20) {
+                        maioresVinte++;
+                    }
+                    break;
+            }
+        }
+        System.out.println("Média de idade do grupo: " + (mediaGrupo / 5) +
+                "\nMédia de idade homens: " + (mediaHomens / homens) +
+                "\nTotal de homens: " + homens +
+                "\nTotal de mulheres: " + mulheres +
+                "\nTotal de mulheres com mais de 20 anos: " + maioresVinte);
     }
 
     public void Alghoritm54() {
+        int i = 0;
+        double mediaAltura = 0;
+        int b = 0;
+        int c = 0;
+        int d = 0;
+        while (i < 7) {
+            i++;
+            System.out.print("Digite sua altura: ");
+            double altura = scanner.nextDouble();
+            mediaAltura = mediaAltura + altura;
+            System.out.print("Digite seu peso: ");
+            double peso = scanner.nextDouble();
+            if (peso < 50) {
+                if( altura < 1.60) {
+                    c++;
+                }
+            } else if (peso > 90) {
+                b++;
+                if (peso > 100) {
+                    if(altura > 1.90) {
+                        d++;
+                    }
+                }
+            }
+        }
+        System.out.println("Média de altura do grupo: " + (mediaAltura / 7) +
+                "\nTotal de pessoas que pesam mais de 90Kg: " + b +
+                "\nTotal de pessoas que pesam mais que 50Kg e tem menos de 1.60m: " + c +
+                "\nTotal de pessoas que pesam mais de 100Kg e tem mais de 1.90m: " + d);
     }
 
     public void Alghoritm55() {
+        int i = 0;
+        double rand = (Math.floor(Math.random() * 10 + 1)) ;
+        boolean resultado = false;
+        System.out.println("O computador sorteou um numero de 1 a 10 e você terá 4 tentativas para acertar.");
+        while(i < 4) {
+            i++;
+            System.out.print("Digite seu palpite: ");
+            double palpite = scanner.nextDouble();
+            if(rand == palpite) {
+                System.out.println("Você acertou! ");
+                resultado = true;
+                i = 4;
+            } else {
+                System.out.println("Você errou! Tente novamente.");
+            }
+        }
+        if (!resultado) {
+            System.out.println("Você perdeu! Numero sorteado: " + rand);
+        }
     }
 
     public void Alghoritm56() {
+        int number = 0;
+        while (number != 1111) {
+            System.out.print("Digite um numero: ");
+            number = scanner.nextInt();
+        }
     }
 
     public void Alghoritm57() {
+        int option = 0;
+        double totalSalarioHomens = 0;
+        double totalSalarioMulheres = 0;
+        while (option != 2) {
+            System.out.print("Digite seu sexo ( [1] para homem - [2] para mulher): ");
+            int sexo = scanner.nextInt();
+            switch (sexo) {
+                case 1:
+                    System.out.print("Digite seu salário: ");
+                    double salarioHomens = scanner.nextDouble();
+                    totalSalarioHomens = totalSalarioHomens + salarioHomens;
+                    break;
+                case 2:
+                    System.out.print("Digite seu salário: ");
+                    double salarioMulheres = scanner.nextDouble();
+                    totalSalarioMulheres = totalSalarioMulheres + salarioMulheres;
+                    break;
+            }
+            System.out.print("Deseja continuar? [1] para sim / [2] para não: ");
+            option = scanner.nextInt();
+        }
+        System.out.println("Total de salário pago aos homens: R$" + totalSalarioHomens +
+                "\nTotal de salário pago as mulheres: R$" + totalSalarioMulheres);
     }
 
     public void Alghoritm58() {
+        int idade = 0;
+        int totalAlunos = 0;
+        int mediaIdade = 0;
+        while (idade != 999) {
+            System.out.print("Digite a idade do aluno: ");
+            idade = scanner.nextInt();
+            if (idade != 999) {
+                totalAlunos++;
+                mediaIdade = mediaIdade + idade;
+            }
+        }
+        System.out.println("Total de alunos: " + totalAlunos +
+                "\nMédia de idade: " + (mediaIdade / totalAlunos));
     }
 
     public void Alghoritm59() {
+        int option = 0;
+        int totalHomens = 0;
+        int mediaHomens = 0;
+        int maiorIdade = 0;
+        int menorIdade =  0;
+        while (option != 2) {
+            System.out.print("Digite seu sexo ([1] para homem - [2] para mulher): ");
+            int sexo = scanner.nextInt();
+            switch (sexo) {
+                case 1:
+                    totalHomens++;
+                    System.out.print("Digite sua idade: ");
+                    int idadeHomens = scanner.nextInt();
+                    mediaHomens = mediaHomens + idadeHomens;
+                    if(idadeHomens > maiorIdade) {
+                        maiorIdade = idadeHomens;
+                    }
+                    break;
+                case 2:
+                    System.out.print("Digite sua idade: ");
+                    int idadeMulheres = scanner.nextInt();
+                    if (menorIdade == 0) {
+                        menorIdade = idadeMulheres;
+                    } else if(idadeMulheres < menorIdade) {
+                        menorIdade = idadeMulheres;
+                    }
+                    if(idadeMulheres > maiorIdade) {
+                        maiorIdade = idadeMulheres;
+                    }
+                    break;
+            }
+            System.out.print("Deseja continuar? [1] para sim / [2] para não: ");
+            option = scanner.nextInt();
+        }
+        System.out.println("Total de homens cadastrados: " + totalHomens +
+                "\nMaior idade lida: " + maiorIdade +
+                "\nIdade da mulher mais jovem: " +menorIdade +
+                "\nMédia de idade entre os homens: " + (mediaHomens / totalHomens));
     }
 
     public void Alghoritm60() {
+        int option = 0;
+        int maiorIdade = 0;
+        String maisVelha = "null";
+        int menorIdade = 0;
+        int maisTrinta = 0;
+        int menosDezoito = 0;
+        int totalPessoas = 0;
+        int media = 0;
+        String maisJovem = "null";
+        while (option != 2) {
+            System.out.print("Digite seu nome: ");
+            String nome = scanner.next();
+            System.out.print("Digite sua idade: ");
+            int idade = scanner.nextInt();
+            media = media + idade;
+            if (idade > maiorIdade) {
+                maiorIdade = idade;
+                maisVelha = nome;
+            }
+            System.out.print("Digite seu sexo ([1] para homem - [2] para mulher): ");
+            int sexo = scanner.nextInt();
+            switch (sexo) {
+                case 1:
+                    if(idade > 30) {
+                        maiorIdade = idade;
+                    }
+                    totalPessoas++;
+                    break;
+                case 2:
+                    if (menorIdade == 0) {
+                        menorIdade = idade;
+                    } else if(idade < menorIdade) {
+                        menorIdade = idade;
+                        maisJovem = nome;
+                    }
+                    if (idade < 18) {
+                        menosDezoito++;
+                    }
+                    totalPessoas++;
+                    break;
+            }
+            System.out.print("Deseja continuar? [1] para sim / [2] para não: ");
+            option = scanner.nextInt();
+        }
+        System.out.println("Média de idade: " + (media / totalPessoas) +
+                "\nNome da pessoa mais velha: " + maisVelha +
+                "\nNome da pessoa mais jovem: " + maisJovem +
+                "\nTotal de homens com mais de 30 anos: " + maisTrinta +
+                "\n Total de mulheres com menos de 18 anos: " +menosDezoito);
     }
 
     public void Alghoritm61() {
