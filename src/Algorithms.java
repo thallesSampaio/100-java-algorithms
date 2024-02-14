@@ -936,18 +936,76 @@ public class Algorithms {
     }
 
     public void Alghoritm61() {
+        int i = 0;
+        do {
+            System.out.println(i);
+            i = i + 3;
+
+        } while(i < 33);
+        System.out.println("Acabou!");
     }
 
     public void Alghoritm62() {
+        int option = 0;
+        int contadorIdades = 0;
+        int totalIdades = 0;
+        int maiorVinteUm = 0;
+        do {
+            System.out.print("Digite sua idade: ");
+            int idade = scanner.nextInt();
+            contadorIdades++;
+            totalIdades = totalIdades + idade;
+            if (idade > 21) {
+                maiorVinteUm++;
+            }
+            System.out.print("Deseja continuar? [1] para sim / [2] para não: ");
+            option = scanner.nextInt();
+        } while (option != 2);
+        System.out.println("Total de idades digitadas: " + contadorIdades +
+                "\nTotal de idades acima de 21: " + maiorVinteUm +
+                "\nMedia das idades: " + (totalIdades / contadorIdades));
     }
 
     public void Alghoritm63() {
+        int option = 0;
+        int somaTotal = 0;
+        int menorValor = 0;
+        int contador = 0;
+        int pares = 0;
+        do {
+            System.out.print("Digite um numero: ");
+            int numero = scanner.nextInt();
+            somaTotal = somaTotal + numero;
+            contador++;
+            if (menorValor == 0) {
+                menorValor = numero;
+            } else if(numero < menorValor){
+                menorValor = numero;
+            }
+            if (numero % 2 == 0) {
+                pares++;
+            }
+            System.out.print("Deseja continuar? [1] para sim / [2] para não: ");
+            option = scanner.nextInt();
+        } while (option != 2);
+        System.out.println("Somatorio total: " + somaTotal +
+                "\nMenor valor digitado: " + menorValor +
+                "\nMedia entre todos os valores: " + (somaTotal / contador) +
+                "\nTotal de numeros pares: " + pares);
     }
 
     public void Alghoritm64() {
+        for (int i = 0; i < 45; i = i + 5) {
+            System.out.println(i);
+        }
+        System.out.println("Acabou!");
     }
 
     public void Alghoritm65() {
+        for (int i = 100; i > -10; i = i - 10) {
+            System.out.println(i);
+        }
+        System.out.println("Acabou!");
     }
 
     public void Alghoritm66() {
