@@ -1009,18 +1009,82 @@ public class Algorithms {
     }
 
     public void Alghoritm66() {
+        System.out.println("Digite um numero: ");
+        int numero = scanner.nextInt();
+        for (int i = 0; i < 11; i++) {
+            System.out.println(numero + " x " + (i) + " = " + (numero * i));
+        }
     }
 
     public void Alghoritm67() {
+        System.out.println("Digite um numero inteiro e positivo: ");
+        int numero = scanner.nextInt();
+        for (int i = 0; i < (numero + 1); i++) {
+            System.out.println(i);
+        }
+        System.out.println("Fim!");
     }
 
     public void Alghoritm68() {
+        int totalMulheres = 0;
+        int totalHomens = 0;
+        int mediaMulheres = 0;
+        int maiorPesoHomens = 0;
+        for (int i = 0; i < 9; i++) {
+            System.out.print("Digite seu sexo ( [1] para homem - [2] para mulher): ");
+            int sexo = scanner.nextInt();
+            System.out.print("Digite seu peso: ");
+            int peso = scanner.nextInt();
+            switch(sexo) {
+                case 1:
+                    if (maiorPesoHomens == 0) {
+                        maiorPesoHomens = peso;
+                    } else if (peso > maiorPesoHomens) {
+                        maiorPesoHomens = peso;
+                    }
+                    if (peso > 100) {
+                        totalHomens++;
+                    }
+                    break;
+                case 2:
+                    totalMulheres++;
+                    mediaMulheres = mediaMulheres + peso;
+                    break;
+            }
+        }
+        System.out.println("Total de mulheres cadastradas: " + totalMulheres +
+                "\nTotal de homens que pesam mais de 100kg: " + totalHomens +
+                "\nMédia de peso entre as mulheres: " + (mediaMulheres / totalMulheres) +
+                "\nMaior peso entre os homens: " + maiorPesoHomens);
     }
 
     public void Alghoritm69() {
+        System.out.print("Digite o primeiro termo da PA: ");
+        int primeiroTermo = scanner.nextInt();
+        System.out.print("Digite a razão da PA: ");
+        int razao = scanner.nextInt();
+        int somaTotal = 0;
+        for (int i = 0; i < 10; i++) {
+            somaTotal = somaTotal + primeiroTermo;
+            System.out.println(primeiroTermo);
+            primeiroTermo = primeiroTermo + razao;
+        }
+        System.out.println("Soma total: " + somaTotal);
     }
 
     public void Alghoritm70() {
+        int n1 = 0;
+        int n2 = 1;
+        int n3 = n1 + n2;
+        System.out.println(n1);
+        System.out.println(n2);
+        System.out.println(n3);
+        for(int i = 0; i < 7; i++) {
+           n1 = n2;
+           n2 = n3;
+           n3 = n1 + n2;
+            System.out.println(n3);
+        }
     }
 
     public void Alghoritm71() {
