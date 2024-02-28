@@ -309,6 +309,106 @@ public class Controller {
             case 75:
                 algorithms.Alghoritm75();
                 break;
+
+            case 76:
+                algorithms.Alghoritm76();
+                break;
+
+            case 77:
+                algorithms.Alghoritm77();
+                break;
+
+            case 78:
+                algorithms.Alghoritm78();
+                break;
+
+            case 79:
+                algorithms.Alghoritm79();
+                break;
+
+            case 80:
+                algorithms.Alghoritm80();
+                break;
+
+            case 81:
+                algorithms.Alghoritm81();
+                break;
+
+            case 82:
+                algorithms.Alghoritm82();
+                break;
+
+            case 83:
+                algorithms.Alghoritm83();
+                break;
+
+            case 84:
+                algorithms.Alghoritm84();
+                break;
+
+            case 85:
+                algorithms.Alghoritm85();
+                break;
+
+            case 86:
+                algorithms.Alghoritm86();
+                break;
+
+            case 87:
+                algorithms.Alghoritm87();
+                break;
+
+            case 88:
+                algorithms.Alghoritm88();
+                break;
+
+            case 89:
+                algorithms.Alghoritm89();
+                break;
+
+            case 90:
+                algorithms.Alghoritm90();
+                break;
+
+            case 91:
+                algorithms.Alghoritm91();
+                break;
+
+            case 92:
+                algorithms.Alghoritm92();
+                break;
+
+            case 93:
+                algorithms.Alghoritm93();
+                break;
+
+            case 94:
+                algorithms.Alghoritm94();
+                break;
+
+            case 95:
+                algorithms.Alghoritm95();
+                break;
+
+            case 96:
+                algorithms.Alghoritm96();
+                break;
+
+            case 97:
+                algorithms.Alghoritm97();
+                break;
+
+            case 98:
+                algorithms.Alghoritm98();
+                break;
+
+            case 99:
+                algorithms.Alghoritm99();
+                break;
+
+            case 100:
+                algorithms.Alghoritm100();
+                break;
         }
     }
 }
