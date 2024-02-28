@@ -1151,18 +1151,81 @@ public class Algorithms {
     }
 
     public void Alghoritm76() {
+        int[] array = new int[8];
+        for(int i = 0; i < array.length; i++) {
+            double rand = (Math.floor(Math.random() * 1000 + 1));
+            int randInt = (int)rand;
+            array[i] = randInt;
+        }
+        for(int i = 0; i < array.length; i++) {
+            System.out.println(array[i]);
+        }
     }
 
     public void Alghoritm77() {
+        String[] array = new String[8];
+        for(int i = 0; i < array.length; i++) {
+            System.out.print("Digite seu nome: ");
+            String nome = scanner.nextLine();
+            array[i] = nome;
+        }
+        for(int i = 7; i > -1; i--) {
+            System.out.println(array[i]);
+        }
     }
 
     public void Alghoritm78() {
+        int[] array = new int[16];
+        for(int i = 0; i < array.length; i++) {
+            System.out.print("Digite um numero inteiro: ");
+            int numero = scanner.nextInt();
+            array[i] = numero;
+        }
+        System.out.println("Valores do array: ");
+        for(int i = 0; i < array.length; i++) {
+            System.out.println(array[i]);
+        }
+        System.out.println("Posições do array em que estão os multiplos de 10: ");
+        for(int i = 0; i < array.length; i++) {
+            if(array[i] % 10 == 0) {
+                System.out.println("[" + i + "]");
+            }
+        }
     }
 
     public void Alghoritm79() {
+        int[] array = new int[11];
+        for(int i = 0; i < array.length; i++) {
+            System.out.print("Digite um numero inteiro: ");
+            int numero = scanner.nextInt();
+            array[i] = numero;
+        }
+        System.out.println("Posiçoes dos numeros pares e valores: ");
+        for(int i = 0; i < array.length; i++) {
+            if(array[i] % 2 == 0) {
+                System.out.println("[" + i + "]" + array[i]);
+            }
+        }
     }
 
     public void Alghoritm80() {
+        int[] array = new int[31];
+        int total = 0;
+        for(int i = 0; i < array.length; i++) {
+            double rand = (Math.floor(Math.random() * 15 + 1));
+            int randInt = (int)rand;
+            array[i] = randInt;
+        }
+        System.out.println("Digite a chave: ");
+        int chave = scanner.nextInt();
+        System.out.println("Posições em que a chave foi encontrada: ");
+        for(int i = 0; i < array.length; i++) {
+            if(chave == array[i]) {
+                System.out.println("[" + i + "]");
+                total++;
+            }
+        }
+        System.out.println("Total de vezes que a chave foi sorteada: " + total);
     }
 
     public void Alghoritm81() {
