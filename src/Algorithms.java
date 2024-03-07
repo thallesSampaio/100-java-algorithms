@@ -1229,6 +1229,32 @@ public class Algorithms {
     }
 
     public void Alghoritm81() {
+        int[] array = new int[9];
+        int media = 0;
+        int maior = 0;
+        int posM = 0;
+        for(int i = 0; i < array.length; i++) {
+            System.out.print("Digite sua idade: ");
+            int idade = scanner.nextInt();
+            array[i] = idade;
+        }
+        for(int i = 0; i < array.length; i++) {
+                media = media + array[i];
+        }
+        System.out.println("Media de idade: " + (media / array.length));
+        for(int i = 0; i < array.length; i++) {
+            if(array[i] > maior) {
+                maior = array[i];
+                posM = i;
+            }
+        }
+        System.out.println("Maiores idades: " + maior);
+        for(int i = 0; i < array.length; i++) {
+            if(array[i] > maior) {
+                maior = array[i];
+            }
+        }
+        System.out.println("Posiçao com maior idade: " + posM);
     }
 
     public void Alghoritm82() {
