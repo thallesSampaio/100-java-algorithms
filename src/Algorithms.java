@@ -1258,9 +1258,56 @@ public class Algorithms {
     }
 
     public void Alghoritm82() {
+        int[] array = new int[11];
+        int media = 0;
+        int maiorNota = 0;
+        int posMaiorNota = 0;
+        int acimaMedia = 0;
+        for(int i = 0; i < array.length; i++) {
+            System.out.print("Digite sua nota: ");
+            int nota = scanner.nextInt();
+            array[i] = nota;
+            media = media + nota;
+            if (maiorNota < nota) {
+                maiorNota = nota;
+                posMaiorNota = i;
+            }
+        }
+        System.out.println("Média da turma: " +(media / array.length));
+        for(int i = 0; i < array.length; i++) {
+            if (array[i] > (media / array.length)) {
+                acimaMedia++;
+            }
+        }
+        System.out.println("Total de alunos acima da media: " + acimaMedia);
+        System.out.println("Maior nota digitada: " + maiorNota + "\nPosição maior nota digitada: " + "[" + (posMaiorNota + 1) + "]");
     }
 
     public void Alghoritm83() {
+        int[] array = new int[21];
+        int aux;
+        for(int i = 0; i < array.length; i++) {
+            double rand = (Math.floor(Math.random() * 99 + 1));
+            int randInt = (int)rand;
+            array[i] = randInt;
+        }
+        System.out.println("Numeros gerados: ");
+        for (int i = 0; i < array.length; i++) {
+            System.out.println(array[i]);
+        }
+        System.out.println("Ordenados crescentemente: ");
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array.length; j++) {
+                if (array[i] < array[j]) {
+                    aux = array[j];
+                    array[j] = array[i];
+                    array[i] = aux;
+                }
+            }
+        }
+        for (int i = 0; i < array.length; i++) {
+            System.out.println(array[i]);
+        }
     }
 
     public void Alghoritm84() {
