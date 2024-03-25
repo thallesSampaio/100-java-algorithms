@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 import static java.lang.Integer.parseInt;
@@ -1311,9 +1312,63 @@ public class Algorithms {
     }
 
     public void Alghoritm84() {
+        int[] menorIdade = new int[10];
+        String[] nomes = new String[10];
+        int[] array = new int[10];
+        for(int i = 0; i < array.length; i++) {
+            System.out.println("Digite a idade: ");
+            int idade = scanner.nextInt();
+            System.out.println("Digite o nome: ");
+            if(idade < 18) {
+                String nome = scanner.next();
+                nomes[i] = nome;
+                menorIdade[i] = idade;
+            } else {
+                array[i] = idade;
+            }
+        }
+        System.out.println("Lista de menores de idade:");
+        for(int i =0; i < menorIdade.length; i++) {
+            System.out.println("Pos [" + i +"]" + menorIdade[i]);
+            System.out.println("Nome: " + nomes[i]);
+        }
     }
 
     public void Alghoritm85() {
+        String[] nome = new String[6];
+        String[] sexo = new String[6];
+        double[] salario = new double[6];
+        int contador = 0;
+        int aux = 0 ;
+        for(int i = 0; i < 5; i ++) {
+            System.out.println("Digite o nome: ");
+            String name = scanner.next();
+            nome[i] = name;
+            System.out.println("Digite o sexo: ");
+            String genero = scanner.next();
+            sexo[i] = genero.toUpperCase();
+            if(sexo[i].equals("FEMININO")) {
+                contador++;
+            }
+            System.out.println("Digite o salario: ");
+            double Salario = scanner.nextDouble();
+            salario[i] = Salario;
+        }
+        int[] array = new int[contador];
+        for(int i = 0; i < 5; i++) {
+            if(sexo[i].equals("FEMININO")) {
+                array[aux++] = i;
+            }
+        }
+        if (contador == 1) {
+            System.out.println("Não há pessoas do sexo feminino para exibir dados");
+        } else {
+            for(int i = 0; i < array.length; i++) {
+                System.out.println("Nome: " + nome[array[i]]);
+                System.out.println("Sexo: " + sexo[array[i]]);
+                System.out.println("Salario : " + salario[array[i]]);
+            }
+        }
     }
 
     public void Alghoritm86() {
