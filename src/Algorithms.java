@@ -1371,48 +1371,285 @@ public class Algorithms {
         }
     }
 
+    //It is not possible to create a method inside another method in Java
+
+    //Algorithm86
+    void Gerador86(){
+        System.out.println("|---------------|");
+        System.out.println("|---Olá Mundo---|");
+        System.out.println("|---------------|");
+    }
     public void Alghoritm86() {
+        Gerador86();
     }
 
+    //Algorithm87
+    void Gerador87(){
+        System.out.println("+---------------------------+");
+        System.out.println("+---Praticando Algoritmos---+");
+        System.out.println("+---------------------------+");
+    }
     public void Alghoritm87() {
+        Gerador87();
     }
 
+    //Algorithm88
+    void Gerador88(String txt, int x) {
+        System.out.println("|---------------------|");
+        do{
+            System.out.println(txt);
+            x--;
+        }while(x != 0);
+        System.out.println("|---------------------|");
+    }
     public void Alghoritm88() {
+        Gerador88("Praticando Algoritmos", 4);
     }
 
+    //Algorithm89
+    void Gerador89(String txt, int x, int opc ) {
+        switch(opc){
+            case 1:
+                System.out.println("+-------=======------+");
+                do{
+                    System.out.println(txt);
+                    x--;
+                }while(x != 0);
+                System.out.println("+-------=======------+");
+                break;
+
+            case 2:
+                System.out.println("~~~~~~~~:::::::~~~~~~~");
+                do{
+                    System.out.println(txt);
+                    x--;
+                }while(x != 0);
+                System.out.println("~~~~~~~~:::::::~~~~~~~");
+                break;
+
+            case 3:
+                System.out.println("<<<<<<<<------->>>>>>>");
+                do{
+                    System.out.println(txt);
+                    x--;
+                }while(x != 0);
+                System.out.println("<<<<<<<<------->>>>>>>");
+                break;
+        }
+    }
     public void Alghoritm89() {
+        Gerador89("Praticando Algoritmos", 3, 3);
     }
 
+    //Algorithm90
+    void Somador90(double n1, double n2) {
+        System.out.println("Resultado da soma: " + (n1 + n2));
+    }
     public void Alghoritm90() {
+        System.out.println("Digite um numero: ");
+        double n1 = scanner.nextDouble();
+        System.out.println("Digite outro numero: ");
+        double n2 = scanner.nextDouble();
+        Somador90(n1, n2);
     }
 
+    //Algorithm91
+    void Maior91(double n1, double n2){
+        if(n1 == n2 ){
+            System.out.println("OS NÚMEROS SÃO IGUAIS!");
+        } else if(n1 > n2) {
+            System.out.println(n1 + " É O MAIOR NÚMERO!");
+        } else {
+            System.out.println(n2 + " É O MAIOR NÚMERO!");
+        }
+    }
     public void Alghoritm91() {
+        System.out.println("Digite um numero: ");
+        double n1 = scanner.nextDouble();
+        System.out.println("Digite outro numero: ");
+        double n2 = scanner.nextDouble();
+        Maior91(n1, n2);
     }
 
+    //Algorithm92
+    void ParOuImpar92(int n) {
+        if ((n % 2) == 0) {
+            System.out.println(n + " É PAR!");
+        } else {
+            System.out.println(n + " É IMPAR!");
+        }
+    }
     public void Alghoritm92() {
+        System.out.println("Digite um numero: ");
+        int n = scanner.nextInt();
+        ParOuImpar92(n);
     }
 
+    //Algorithm93
+    void Contador93(int inicio, int fim, int incremento) {
+        System.out.println("Para os valores de inicio: " + inicio + " | " + fim + " | " + incremento);
+        if(inicio > 0 && fim > 0) {
+            if(inicio < fim) {
+                while (inicio < fim) {
+                    System.out.print(inicio + " >>");
+                    inicio = inicio + incremento;
+                }
+            } else {
+                while (inicio > fim) {
+                    System.out.print(inicio + " >>");
+                    inicio = inicio - incremento;
+                }
+            }
+
+        } else {
+            while (inicio > fim) {
+                System.out.print(inicio + " >>");
+                inicio = inicio - incremento;
+            }
+        }
+    }
     public void Alghoritm93() {
+        System.out.println("Digite o numero de inicio: ");
+        int inicio = scanner.nextInt();
+        System.out.println("Digite o numero de fim: ");
+        int fim = scanner.nextInt();
+        System.out.println("Digite o numero de incremento: ");
+        int incremento = scanner.nextInt();
+        Contador93(inicio, fim, incremento);
     }
 
+    //Algorithm94
+    void Fibonacci94(int n) {
+        int n1 = 0;
+        int n2 = 1;
+        int n3 = n1 + n2;
+        int[] array = new int[n + 1];
+        for(int i = 0; i < n; i++) {
+            if(i == 0) {
+                n1 = 0;
+                n2 = 1;
+                array[i] = n3;
+                System.out.println(+ array[i]);
+            } else {
+                n3 = n1 + n2;
+                n1 = n2;
+                n2 = n3;
+                array[i] = n3;
+                System.out.println(+ array[i]);
+            }
+        }
+    }
     public void Alghoritm94() {
+        System.out.println("Digite o numero de termos que deseja ver da sequencia fibonacci: ");
+        int n = scanner.nextInt();
+        Fibonacci94(n);
     }
 
+    //Algorithm95
+    public double Somador95(double n1, double n2){
+        return (n1 + n2);
+    }
     public void Alghoritm95() {
+        System.out.println("Digite um numero: ");
+        double n1 = scanner.nextDouble();
+        System.out.println("Digite outro numero: ");
+        double n2 = scanner.nextDouble();
+        System.out.println(Somador95(n1, n2));
     }
 
+    //Algorithym96
+    public double Media96(double n1, double n2) {
+        double r = (n1 + n2) / 2;
+        return r;
+    }
     public void Alghoritm96() {
+        System.out.println("Digite a primeira nota: ");
+        double n1 = scanner.nextDouble();
+        System.out.println("Digite a segunda nota: ");
+        double n2 = scanner.nextDouble();
+        System.out.println("Media: " + Media96(n1, n2));
     }
 
+    //Algorithm97
+    public double Maior97(double n1, double n2, double n3){
+        double r;
+        if(n1 == n2 && n2 == n3 ){
+            r = 3.14;
+        } else if(n1 > n2 && n1 > n3) {
+            r = n1;
+        } else if(n2 > n1 && n2 > n3) {
+            r = n2;
+        } else {
+            r = n3;
+        }
+        return r;
+    }
     public void Alghoritm97() {
+        System.out.println("Digite um numero: ");
+        double n1 = scanner.nextDouble();
+        System.out.println("Digite outro numero: ");
+        double n2 = scanner.nextDouble();
+        System.out.println("Digite outro numero: ");
+        double n3 = scanner.nextDouble();
+        System.out.println(Maior97(n1, n2, n3) + " É o maior!");
     }
 
+    //Algorithm98
+    public int SuperSomador98(int n1, int n2) {
+        int aux = 0;
+        if (n1 > n2) {
+            for (int i = n1; i >= n2; i--) {
+                aux = aux + i;
+            }
+        } else {
+            for (int i = n2; i >= n1; i--) {
+                aux = aux + i;
+            }
+        }
+        return aux;
+    }
     public void Alghoritm98() {
+        System.out.println("Digite um numero: ");
+        int n1 = scanner.nextInt();
+        System.out.println("Digite outro numero: ");
+        int n2 = scanner.nextInt();
+        System.out.println("Total da soma: " + SuperSomador98(n1, n2));
     }
 
+    //Algorithm99
+    int Potencia99(int b, int e){
+        int aux = 1;
+        for (int i = 0; i < e; i++) {
+            aux = aux * b;
+        }
+        return aux;
+    }
     public void Alghoritm99() {
+        System.out.println("Digite a base: ");
+        int b = scanner.nextInt();
+        System.out.println("Digite o expoente: ");
+        int e = scanner.nextInt();
+        System.out.println(Potencia99(b, e));
     }
 
+    //Algorithm100
+
+    String Situacao100(double r) {
+        String res = "";
+        if(r >= 6) {
+            res = "APROVADO";
+        } else if (r < 6 && r > 4) {
+            res = "RECUPERAÇÃO";
+        } else {
+            res = "REPROVADO";
+        }
+        return res;
+    }
     public void Alghoritm100() {
+        System.out.println("Digite a primeira nota: ");
+        double n1 = scanner.nextDouble();
+        System.out.println("Digite a segunda nota: ");
+        double n2 = scanner.nextDouble();
+        System.out.println("Media: " + Media96(n1, n2) + " Situação: " + Situacao100(Media96(n1,n2)));
     }
 }
